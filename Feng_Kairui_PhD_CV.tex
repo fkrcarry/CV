@@ -1,0 +1,95 @@
+\documentclass{resume} % Keep resume.cls from the original Overleaf template
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[left=0.75in,top=0.55in,right=0.75in,bottom=0.35in]{geometry}
+
+\name{Kairui Feng}
+\address{Phone: +86 185 9965 1229 \quad Email: \href{mailto:3405402279@qq.com}{3405402279@qq.com}}
+
+\definecolor{CarnegieMellonRed}{RGB}{196,18,48}
+\renewenvironment{rSection}[1]{
+\sectionskip
+\textcolor{CarnegieMellonRed}{\MakeUppercase{#1}}
+\sectionlineskip
+\hrule
+\begin{list}{}{\setlength{\leftmargin}{1.5em}}
+\item[]
+}{\end{list}}
+
+\begin{document}
+
+\begin{rSection}{Education}
+\textbf{Zhejiang University} \hfill \textit{Expected Jun. 2027}\\
+B.Eng. in Information Security, College of Computer Science and Technology\\
+GPA: 3.96/4.30 \quad Weighted Average: 87.33/100 \quad IELTS Academic: 6.5
+\end{rSection}
+
+\begin{rSection}{Security-Related Core Coursework}
+\textbf{Security Coursework Average: 92.1/100 (18.5 credits)}\\
+\small Software Security Principles (99); Software Security Theory \& Practice (92); Network Security Theory \& Practice (92); AI Security (89); AI Security \& Ethics (89); Advanced Cryptology (92); System Security (97); Wireless/IoT Security (84); Privacy, Security \& Digital Currency (95).\normalsize
+\end{rSection}
+
+\begin{rSection}{Selected Systems Projects and Research Experience}
+\textbf{Linux Kernel Security Analysis and Exploitation} \hfill \textit{Independent Security Practice}\\
+\begin{itemize}
+    \item Analyzed kernel coloring techniques through source-code reading.
+\end{itemize}
+
+\textbf{gdb-helper} \hfill \textit{Open-Source Debugging Tool}\\
+\begin{itemize}
+    \item Extended an open-source GDB plugin with DeepSeek API integration to translate natural-language CLI requests into multi-step native GDB workflows. \url{https://github.com/fkrcarry/gdb-helper}
+\end{itemize}
+
+\textbf{RISC-V Operating System on a Self-Designed CPU} \hfill \textit{ZJU Computer Systems Integrated Curriculum}\\
+\begin{itemize}
+    \item Independently built a RISC-V OS running on a self-designed CPU. \textbf{SYS1:} designed and validated a single-cycle RISC-V CPU in HDL.
+    \item \textbf{SYS2:} implemented a basic kernel with interrupts and context switching; built an RV64I CPU with a five-stage pipeline, branch prediction, bus interface, forwarding, L1 cache, and privileged instructions.
+    \item \textbf{SYS3 (Labs 1--5 and xpart MMU):} implemented boot and timer interrupts, preemptive kernel threads, virtual memory, user mode and system calls, page faults, process creation, and MMU functionality.
+    \item Received the \textit{Outstanding Project Award} from Prof. Rui Chang and Prof. Wenbo Shen (9 recipients among approximately 150 students).
+\end{itemize}
+
+\textbf{C++ RISC-V Compiler} \hfill \textit{Independent Systems Project}\\
+\begin{itemize}
+    \item Developed a C++ compiler targeting RISC-V.
+\end{itemize}
+
+\textbf{Mobile GUI-Agent-Based iOS App Behavior-Transformation Detection System} \hfill \textit{Under Prof. Haitao Xu}\\
+\begin{itemize}
+    \item Developed a mobile GUI-agent-based detector for iOS apps that change behavior or presentation during interaction.
+\end{itemize}
+
+\textbf{MCP Server Security Vulnerability Discovery} \hfill \textit{Independent Security Research}\\
+\begin{itemize}
+    \item Identified and publicly disclosed an SSRF vulnerability in \texttt{imprvhub/}\allowbreak\texttt{mcp-browser-agent} (up to 0.8.0) through user-controlled fields in \texttt{CallToolRequestSchema}; CVE-2026-5607: \url{https://vuldb.com/source_cve/355398}
+\end{itemize}
+
+\textbf{Other Security Research} \hfill \textit{Zhejiang University}\\
+\begin{itemize}
+    \item Code LLM red-teaming under Prof. Kui Ren and Prof. Zhan Qin (patent pending); SEED Labs security experimentation under Prof. Wenliang Du.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Teaching Experience}
+\textbf{Teaching Assistant}, Zhejiang University: Computer Systems I (SYS1), Computer Systems II (SYS2), and Principles and Practice of Software Security.\\
+Delivered theory and laboratory instruction; released and checked labs; graded coursework and quizzes.
+\end{rSection}
+
+\begin{rSection}{Honors and Awards}
+\begin{itemize}
+    \item University-Level Student Pacesetter Award, Zhejiang University (twice)
+    \item Second Prize, National College Student Information Security Competition
+    \item First Prize, Zhejiang Provincial College Student Information Security Competition
+    \item Third Place, Pwn Track, ZJUCTF 2025 (Zhejiang University)
+    \item Ranked No. 4 in the Pwn track on Zhejiang University's CTF platform
+    \item Outstanding Project Award, Computer Systems Integrated Curriculum
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\begin{tabular}{@{} >{\bfseries}l @{\hspace{1.5ex}} p{0.70\textwidth}}
+Programming Languages & C, C++, Python, SystemVerilog \\
+Systems \& Tools & Linux command line, Git, Docker, \LaTeX, QEMU kernel debugging, binary debugging, kernel vulnerability reproduction/analysis, fuzzing, Linux kernel modules/drivers, kernel privilege-escalation exploitation \\
+\end{tabular}
+\end{rSection}
+
+\end{document}

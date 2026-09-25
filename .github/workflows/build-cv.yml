@@ -1,0 +1,34 @@
+name: Build CV PDFs
+
+on:
+  push:
+    paths:
+      - '**.tex'
+      - 'resume.cls'
+      - '.github/workflows/build-cv.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build English CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Feng_Kairui_PhD_CV.tex
+          latexmk_use_xelatex: true
+      - name: Build Chinese CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Feng_Kairui_PhD_CV_CN.tex
+          latexmk_use_xelatex: true
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdfs
+          path: '*.pdf'
+          if-no-files-found: error

@@ -1,0 +1,96 @@
+\documentclass{resume} % 使用原 Overleaf 模板中的 resume.cls
+\usepackage[UTF8]{ctex}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[left=0.75in,top=0.55in,right=0.75in,bottom=0.35in]{geometry}
+
+\name{冯恺睿}
+\address{电话：+86 185 9965 1229 \quad 邮箱：\href{mailto:3405402279@qq.com}{3405402279@qq.com}}
+
+\definecolor{CarnegieMellonRed}{RGB}{196,18,48}
+\renewenvironment{rSection}[1]{
+\sectionskip
+\textcolor{CarnegieMellonRed}{\MakeUppercase{#1}}
+\sectionlineskip
+\hrule
+\begin{list}{}{\setlength{\leftmargin}{1.5em}}
+\item[]
+}{\end{list}}
+
+\begin{document}
+
+\begin{rSection}{教育背景}
+\textbf{浙江大学} \hfill \textit{预计 2027 年 6 月毕业}\\
+计算机科学与技术学院，信息安全专业，工学学士\\
+GPA：3.96/4.30 \quad 加权平均分：87.33/100 \quad 雅思：6.5
+\end{rSection}
+
+\begin{rSection}{安全相关核心课程}
+\textbf{安全相关课程加权平均分：92.1/100（18.5 学分）}\\
+\small 软件安全原理（99）；软件安全理论与实践（92）；网络安全理论与实践（92）；人工智能安全（89）；人工智能安全与伦理（89）；高级密码学（92）；系统安全：原理与实践（97）；无线与物联网安全（84）；隐私、安全与数字货币（95）。\normalsize
+\end{rSection}
+
+\begin{rSection}{系统与安全项目经历}
+\textbf{Linux 内核安全分析与利用} \hfill \textit{独立安全实践}\\
+\begin{itemize}
+    \item 通过源码阅读分析内核染色技术。
+\end{itemize}
+
+\textbf{gdb-helper} \hfill \textit{开源调试工具}\\
+\begin{itemize}
+    \item 在已有开源 GDB 插件中接入 DeepSeek API，将命令行中的自然语言调试需求转化为多步原生 GDB 调试流程。\url{https://github.com/fkrcarry/gdb-helper}
+\end{itemize}
+
+\textbf{运行于自研 CPU 的 RISC-V 操作系统} \hfill \textit{浙江大学计算机系统贯通课程}\\
+\begin{itemize}
+    \item 独立实现运行于自研 CPU 的 RISC-V 操作系统；\textbf{SYS1：}使用 HDL 设计、实现并验证单周期 RISC-V CPU。
+    \item \textbf{SYS2：}实现支持中断和进程上下文切换的简易内核；实现支持五级流水线、分支预测、总线接口、转发、一级缓存和特权指令的 RV64I CPU。
+    \item \textbf{SYS3（Lab 1--5 及 xpart MMU）：}实现启动和时钟中断、抢占式内核线程、虚拟内存、用户态和系统调用、缺页、进程创建及 MMU 功能。
+    \item 获常瑞老师、申文博老师颁发的\textit{优秀作品奖}；约 150 名信息安全和图灵班学生中仅 9 人获奖。
+\end{itemize}
+
+\textbf{C++ RISC-V 编译器} \hfill \textit{独立系统项目}\\
+\begin{itemize}
+    \item 使用 C++ 开发面向 RISC-V 的编译器。
+\end{itemize}
+
+\textbf{基于移动端 GUI 智能体的 iOS 变身 App 检测系统} \hfill \textit{许海涛老师指导}\\
+\begin{itemize}
+    \item 开发基于移动端 GUI 智能体的 iOS 应用检测系统，识别交互中改变行为或呈现方式的应用。
+\end{itemize}
+
+\textbf{MCP Server 安全漏洞挖掘} \hfill \textit{独立安全研究}\\
+\begin{itemize}
+    \item 发现并公开披露 \texttt{imprvhub/}\allowbreak\texttt{mcp-browser-agent}（至 0.8.0 版本）的 SSRF 漏洞，根因是 \texttt{CallToolRequestSchema} 中用户可控字段；CVE-2026-5607：\url{https://vuldb.com/source_cve/355398}
+\end{itemize}
+
+\textbf{其他安全研究} \hfill \textit{浙江大学}\\
+\begin{itemize}
+    \item 在任奎老师、秦湛老师指导下参与代码大模型红队研究（相关专利申请中）；在杜文亮老师指导下参与 SEED Labs 安全实验。
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{助教经历}
+\textbf{浙江大学助教：}计算机系统 I（SYS1）、计算机系统 II（SYS2）、软件安全原理与实践。\\
+负责理论与实验讲解、实验发布和验收、作业及 Quiz 批改。
+\end{rSection}
+
+\begin{rSection}{荣誉与竞赛}
+\begin{itemize}
+    \item 浙江大学校级标兵（两次）
+    \item 全国大学生信息安全竞赛二等奖
+    \item 浙江省大学生信息安全竞赛一等奖
+    \item 2025 ZJUCTF Pwn 方向校内第三名
+    \item 浙江大学 CTF 网站 Pwn 方向校内第 4 名
+    \item 计算机系统贯通课程优秀作品奖
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{专业技能}
+\begin{tabular}{@{} >{\bfseries}l @{\hspace{1.5ex}} p{0.70\textwidth}}
+编程语言 & C、C++、Python、SystemVerilog \\
+系统与工具 & Linux 命令行、Git、Docker、\LaTeX、QEMU 内核调试、二进制程序调试、内核漏洞复现与分析、Fuzzing、Linux 内核模块/驱动、内核提权利用 \\
+\end{tabular}
+\end{rSection}
+
+\end{document}
